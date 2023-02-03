@@ -19,7 +19,7 @@
         </div>
         <div class="num">
             <form>
-                <input id="screenId" type='number'>
+                <input id="screenId" type='text'>
             </form>
         </div>
         <div class="button">
@@ -30,27 +30,27 @@
                 <button> M- </button>
             </div>
             <div class="b2">
-                <button onclick="inputNumber(7)"> 7 </button>
-                <button onclick="inputNumber(8)"> 8 </button>
-                <button onclick="inputNumber(9)"> 9 </button>
+                <button onclick="inputNumber('7')"> 7 </button>
+                <button onclick="inputNumber('8')"> 8 </button>
+                <button onclick="inputNumber('9')"> 9 </button>
                 <button> * </button>
             </div>
             <div class="b3">
-                <button onclick="inputNumber(4)"> 4 </button>
-                <button onclick="inputNumber(5)"> 5 </button>
-                <button onclick="inputNumber(6)"> 6 </button>
+                <button onclick="inputNumber('4')"> 4 </button>
+                <button onclick="inputNumber('5')"> 5 </button>
+                <button onclick="inputNumber('6')"> 6 </button>
                 <button> / </button>
             </div>
             <div class="b4">
-                <button onclick="inputNumber(1)"> 1 </button>
-                <button onclick="inputNumber(2)"> 2 </button>
-                <button onclick="inputNumber(3)"> 3 </button>
-                <button> + </button>
+                <button onclick="inputNumber('1')"> 1 </button>
+                <button onclick="inputNumber('2')"> 2 </button>
+                <button onclick="inputNumber('3')"> 3 </button>
+                <button onclick="inputNumber('+')"> + </button>
             </div>
-            <div class="b5">
-                <button onclick="inputNumber(0)"> 0 </button>
+            <div class="b5"> 
+                <button onclick="inputNumber('0')"> 0 </button>
                 <button> . </button>
-                <button> = </button>
+                <button onclick="evaluateResult()"> = </button>
                 <button> - </button>
             </div>
         </div>
@@ -60,7 +60,11 @@
         let overAllResult=""
         let screen= document.getElementById("screenId");
         function inputNumber(num) {
-            screen.value= num;
+            overAllResult=overAllResult+num
+            screen.value=overAllResult
+        }
+        function evaluateResult(){
+            screen.value=eval(overAllResult)
         }
     </script>
 </body>
