@@ -24,8 +24,10 @@
         </div>
         <div class="button">
             <div class="b1">
-                <button onclick="clearScreen()"> C </button>
+                <button onclick="clearScreen()"> AC </button>
+                <button onclick="clearPrevious()">C</button>
                 <button onclick="inputNumber('%')"> % </button>
+                <button onclick="inputNumber('**')">^</button>
             </div>
             <div class="b2">
                 <button onclick="inputNumber('7')"> 7 </button>
@@ -47,7 +49,7 @@
             </div>
             <div class="b5"> 
                 <button onclick="inputNumber('0')"> 0 </button>
-                <button> . </button>
+                <button onclick="inputNumber('.')"> . </button>
                 <button onclick="evaluateResult()"> = </button>
                 <button onclick="inputNumber('-')"> - </button>
             </div>
@@ -69,6 +71,13 @@
         function clearScreen() {
             screen.value=""
             overAllResult=""
+        }
+        function clearPrevious() {
+            let charArr=overAllResult.split("").slice(0,overAllResult.split("").length-1).join()
+            overAllResult=charArr
+          console.log(charArr)
+            // overAllResult=overAllResult.split("").pop().join();
+            screen.value=overAllResult
         }
 
     </script>

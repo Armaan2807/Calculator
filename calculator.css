@@ -4,11 +4,27 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #A6E3E9;
+    background-color: #7895B2;
 }
 
-.calculator {
+/* .calculator {
     max-width: 700px;
+} */
+.calculator {
+    padding: 23px;
+    border-radius: 53px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+
+}
+h1 {
+    color: #fff;
 }
 
 .cal {
@@ -25,17 +41,19 @@ input {
     padding: 5px;
     box-sizing: border-box;
     transition: .3s;
+    font-size: 24px;
 }
 
-.button {
-    font-size: 45px;
-    background-color: #EEEEEE;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
+button {
+    border-radius: 20px;
+    font-size: 40px;
+    background: #fff;
+    width: 102px;
+    height: 90px;
+    margin: 6px;
+    cursor: pointer;
 }
+
 .b1 .b2 .b3 .b4 .b5 {
     width: 100%;
 }
